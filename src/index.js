@@ -40,5 +40,8 @@ export default {
         } else {
             await message.forward(env.FORWARD_TO);
         }
+    },
+    async fetch(request, env, ctx) {
+        return new Response('405 Method Not Allowed', { status: 405 });
     }
 }
